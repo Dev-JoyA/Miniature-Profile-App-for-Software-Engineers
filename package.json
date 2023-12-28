@@ -4,6 +4,9 @@
   "description": "Starter kit for creating React and Express apps",
   "main": "server.js",
   "scripts": {
+    "build": "npm run build --prefix client",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d client/build",
     "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -13,11 +16,13 @@
   "author": "Joy Aruku",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nodemon": "^1.14.6"
   },
   "dependencies": {
     "concurrently": "^3.5.1",
     "cors": "^2.8.5",
     "express": "^4.16.2"
-  }
+  },
+  "homepage": "https://Dev-JoyA.github.io/Miniature-Profile-App-for-Software-Engineers"
 }
